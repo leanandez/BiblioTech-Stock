@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>BiblioTech Stock</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>BiblioTech Stock</h1>
+        <h4 id="comienzoChiste" class="comienzoChiste"></h4>
+    </header>
+
+    <main>
+        <span>
+            <div class="consultar">
+                <h3>CONSULTAR STOCK</h3>
+                <h4>Para CONSULTAR los libros en Stock hacé click acá:</h4>
+                <button type="button" id="btnMostrarLibros" class="btn btn-primary">Consultar</button>
+            </div>
+        </span>
+        <section>
+            <div class="buscar">
+                <h2>BUSCAR LIBRO</h2>
+                <h3>Para BUSCAR un LIBRO:</h3>
+                <h4>-Ingresá su título o autor en MAYUSCULA acá:</h4>
+                <p> o su número de ID:</p>
+                <form id="formBusqueda">
+                    <input class="form-control" type="text" name="" id="buscarLibro">
+                    <button type="submit" id="btnBuscar" class="btn btn-primary btn-lg">Buscar</button>
+                </form>
+                
+            </div>
+            <div class="reservas">
+                <h2>BUSCAR RESERVA</h2>
+                <h3>Para BUSCAR una RESERVA:</h3>
+                <h4>-Ingresá el ID DE LA RESERVA</h4>
+                <p> o el titulo/autor (en mayúscula) del libro reservado:</p>
+                <form id="formBusquedaReserva">
+                    <input class="form-control" type="text" name="" id="buscarReserva">
+                    <button type="submit" id="btnBuscarReserva" class="btn btn-primary btn-lg">Buscar</button>
+                </form>
+            </div>
+
+            <div class="agregar">
+                <h2>AGREGAR LIBRO</h2>
+                <h3 class=>Para AGREGAR un libro al Stock, completá el formulario</h3>
+                <form id="form" class="form">
+                    <label class="form-label">Titulo:</label>
+                    <input class="form-control" type="text" name="titulo" id="ititulo" required>
+                    <label class="form-label">Autor:</label>
+                    <input class="form-control" type="text" name="autor" id="iautor" required>
+                    <label class="form-label">Editorial:</label>
+                    <input class="form-control" type="text" name="editorial" id="ieditorial" required>
+                    <label class="form-label">Precio:</label>
+                    <input class="form-control" type="number" name="precio" id="iprecio" required>
+                    <label class="form-label">Cantidad:</label>
+                    <input class="form-control" type="number" name="cantidad" id="icantidad" required>
+                    <button type="submit" id="btnSubmit" class="btn btn-primary btn-lg">Guardar libro</button>
+                </form>
+            </div>
+            
+        </section>
+
+        <div id="cabeceraMostrar" class="cabeceraMostrar"></div>
+        <div id="mostrarBusqueda" class="mostrarBusqueda"></div>
+
+        <div id="modalContainer" class="modalContainer">
+            <div class="popup">
+                <button id="btnCerrar">X</button>
+                <h2>RESERVAR LIBRO</h2>
+                <div id="mostrarReserva"></div>
+                <form id="formReservar">
+                    <label class="form-label">Nombre del cliente:</label>
+                    <input type="text" class="form-control" name="cliente" id="icliente">
+                    <label class="form-label">Cantidad:</label>
+                    <input type="number" class="form-control" name="icantidadReserva" id="cantidadReserva" value="1">
+                    <button type="submit" id="btnSubmitReservar" class="btn btn-primary">Guardar reserva</button>
+                </form>
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <footer id="remateChiste"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
